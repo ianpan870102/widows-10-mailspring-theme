@@ -1,3 +1,7 @@
+This is a custom copy of the ui-darkside theme from Mailspring, created for my personal use.
+
+Below is the documenation of original theme
+
 # Darkside
 **An dark sidebar theme for [Mailspring](https://getmailspring.com). Created by [Jamie Wilson](http://jamiewilson.io)**
 
@@ -43,4 +47,3 @@
 
 ### Feedback
 If you have questions or suggestions, please submit an issue. If you need to, you can email me at [jamie@jamiewilson.io](mailto:jamie@jamiewilson?subject=Re: Darkside).
-# mailspring-darkside-custom
