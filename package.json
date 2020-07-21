@@ -1,9 +1,9 @@
 {
-  "name": "ui-darkside-custom",
-  "displayName": "Darkside Custom",
+  "name": "windows-10-mail",
+  "displayName": "Windows 10 Mail",
   "theme": "ui",
-  "version": "1.0.0",
-  "description": "A customizable, dark sidebar theme for Mailspring.",
+  "version": "0.5.0",
+  "description": "Windows 10 Mail theme",
   "license": "MIT",
   "engines": {
     "mailspring": "*"
