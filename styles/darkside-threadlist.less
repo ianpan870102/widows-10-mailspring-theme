@@ -61,11 +61,11 @@ body.is-blurred .list-tabular .list-tabular-item.keyboard-cursor {
   border-left-color: tint(@sidebar, 70%);
 }
 
-.thread-list .unread:not(.focused):not(.selected), .draft-list .unread:not(.focused):not(.selected) .list-tabular .list-tabular-item .unread  {
-  border-left-color: @accent;
-  background: @threadlist-bg !important;
-  color: @accent;
-}
+// .thread-list .unread:not(.focused):not(.selected), .draft-list .unread:not(.focused):not(.selected) .list-tabular .list-tabular-item .unread  {
+//   border-left-color: @accent;
+//   background: @threadlist-bg !important;
+//   color: @accent;
+// }
 
 .snippet {
   color: @sidebar-text !important;
@@ -82,4 +82,21 @@ body.is-blurred .list-tabular .list-tabular-item.keyboard-cursor {
 .draft-list .list-tabular .list-tabular-item:hover {
   background: @threadlist-bg-focused !important;
   color: @sidebar-text;
+}
+
+
+.thread-list .unread,
+.draft-list .unread,
+.list-tabular .list-tabular-item .unread  {
+  border-left-color: @accent !important;
+  background: @threadlist-bg !important;
+  color: @accent !important;
+}
+
+.thread-list .unread .focused,
+.draft-list .unread .focused,
+.list-tabular .list-tabular-item .unread .focused  {
+  border-left-color: @accent !important;
+  background: @threadlist-bg-focused !important;
+  color: @accent !important;
 }
