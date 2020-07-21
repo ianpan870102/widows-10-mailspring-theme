@@ -18,35 +18,68 @@
   background: @threadlist-bg;
 }
 
+
 .list-tabular .list-tabular-item {
   background-color: @threadlist-bg;
+  color: @sidebar-text;
   border-bottom: 1px solid @border-color !important;
 }
 
-// Using !important so multiple selection actions
+
 .list-tabular .list-tabular-item:hover {
-  background: tint(@sidebar, 95%) !important;
+  background: @threadlist-bg-focused !important;
+  color: @sidebar-text;
 }
+
 
 .list-container .list-item.focused,
 .list-container .list-item.selected,
 .thread-list.handler-split .list-item.selected {
-  background: tint(@accent, 70%); // selected message background
-  color: @active-thread-text;
+  // background: tint(@accent, 70%); // selected message background
+  // color: @active-thread-text;
+  background: @threadlist-bg-focused;
+  color: @sidebar-text;
 }
 
 body.is-blurred .list-container .list-item.focused,
 body.is-blurred .list-container .list-item.selected,
 body.is-blurred .thread-list.handler-split .list-item.selected {
-  background: tint(@sidebar, 90%);
-  color: @active-thread-text;
+  // background: tint(@sidebar, 90%);
+  // color: @active-thread-text;
+  background: @threadlist-bg-focused;
+  color: @sidebar-text;
 }
 
 .list-tabular .list-tabular-item.keyboard-cursor {
   border-left-color: @accent;
-  background: tint(@accent, 90%);
+  // background: tint(@accent, 90%);
+  background: @threadlist-bg-focused;
+  color: @accent;
 }
 
 body.is-blurred .list-tabular .list-tabular-item.keyboard-cursor {
   border-left-color: tint(@sidebar, 70%);
+}
+
+.thread-list .unread:not(.focused):not(.selected), .draft-list .unread:not(.focused):not(.selected) .list-tabular .list-tabular-item .unread  {
+  border-left-color: @accent;
+  background: @threadlist-bg !important;
+  color: @accent;
+}
+
+.snippet {
+  color: @sidebar-text !important;
+}
+
+.empty-state .perspective-empty-state .message {
+  color: @sidebar-text !important;
+}
+
+// TODO:
+// unread focused (should have unread accents!)
+// Draft hover (should be dark focused bg)
+
+.draft-list .list-tabular .list-tabular-item:hover {
+  background: @threadlist-bg-focused !important;
+  color: @sidebar-text;
 }
