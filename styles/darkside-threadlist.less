@@ -28,17 +28,15 @@
 
 .list-tabular .list-tabular-item:hover {
   background: @threadlist-bg-focused !important;
-  color: @sidebar-text;
+  color: @sidebar-text; // avoid important (clashes with unread)
 }
 
 
 .list-container .list-item.focused,
 .list-container .list-item.selected,
 .thread-list.handler-split .list-item.selected {
-  // background: tint(@accent, 70%); // selected message background
-  // color: @active-thread-text;
-  background: @threadlist-bg-focused;
-  color: @sidebar-text;
+  background: @threadlist-bg-focused !important;
+  color: @sidebar-text; // avoid important (clashes with unread)
 }
 
 body.is-blurred .list-container .list-item.focused,
@@ -66,6 +64,11 @@ body.is-blurred .list-tabular .list-tabular-item.keyboard-cursor {
 //   background: @threadlist-bg !important;
 //   color: @accent;
 // }
+.thread-list .unread, .draft-list .unread, .list-tabular .list-tabular-item .unread  {
+  border-left-color: @accent !important;
+  background: @threadlist-bg !important;
+  color: @accent !important;
+}
 
 .snippet {
   color: @sidebar-text !important;
@@ -76,27 +79,10 @@ body.is-blurred .list-tabular .list-tabular-item.keyboard-cursor {
 }
 
 // TODO:
-// unread focused (should have unread accents!)
+// unread focused (should have unread bold!)
 // Draft hover (should be dark focused bg)
 
 .draft-list .list-tabular .list-tabular-item:hover {
   background: @threadlist-bg-focused !important;
   color: @sidebar-text;
-}
-
-
-.thread-list .unread,
-.draft-list .unread,
-.list-tabular .list-tabular-item .unread  {
-  border-left-color: @accent !important;
-  background: @threadlist-bg !important;
-  color: @accent !important;
-}
-
-.thread-list .unread .focused,
-.draft-list .unread .focused,
-.list-tabular .list-tabular-item .unread .focused  {
-  border-left-color: @accent !important;
-  background: @threadlist-bg-focused !important;
-  color: @accent !important;
 }
