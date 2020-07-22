@@ -20,14 +20,14 @@
 
 
 .list-tabular .list-tabular-item {
-  background-color: @threadlist-bg;
+  background: @threadlist-bg;
   color: @sidebar-text;
   border-bottom: 1px solid @border-color !important;
 }
 
 
 .list-tabular .list-tabular-item:hover {
-  background: @threadlist-bg-focused !important;
+  background: @threadlist-bg-hover !important;
   color: @sidebar-text; // avoid important (clashes with unread)
 }
 
@@ -42,15 +42,12 @@
 body.is-blurred .list-container .list-item.focused,
 body.is-blurred .list-container .list-item.selected,
 body.is-blurred .thread-list.handler-split .list-item.selected {
-  // background: tint(@sidebar, 90%);
-  // color: @active-thread-text;
   background: @threadlist-bg-focused;
   color: @sidebar-text;
 }
 
 .list-tabular .list-tabular-item.keyboard-cursor {
   border-left-color: @accent;
-  // background: tint(@accent, 90%);
   background: @threadlist-bg-focused;
   color: @accent;
 }
@@ -59,11 +56,6 @@ body.is-blurred .list-tabular .list-tabular-item.keyboard-cursor {
   border-left-color: tint(@sidebar, 70%);
 }
 
-// .thread-list .unread:not(.focused):not(.selected), .draft-list .unread:not(.focused):not(.selected) .list-tabular .list-tabular-item .unread  {
-//   border-left-color: @accent;
-//   background: @threadlist-bg !important;
-//   color: @accent;
-// }
 .thread-list .unread, .draft-list .unread, .list-tabular .list-tabular-item .unread  {
   border-left-color: @accent !important;
   background: @threadlist-bg !important;
@@ -79,10 +71,19 @@ body.is-blurred .list-tabular .list-tabular-item.keyboard-cursor {
 }
 
 // TODO:
-// unread focused (should have unread bold!)
 // Draft hover (should be dark focused bg)
 
 .draft-list .list-tabular .list-tabular-item:hover {
+  background: @threadlist-bg-hover !important;
+  color: @sidebar-text; // avoid important (clashes with unread)
+}
+
+.draft-list .list-container .list-item.selected, .draft-list .list-tabular .list-tabular-item.keyboard-cursor {
   background: @threadlist-bg-focused !important;
-  color: @sidebar-text;
+  color: @sidebar-text; // avoid important (clashes with unread)
+}
+
+.list-tabular .list-tabular-item:hover {
+  background: @threadlist-bg-hover !important;
+  color: @sidebar-text; // avoid important (clashes with unread)
 }
