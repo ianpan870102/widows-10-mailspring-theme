@@ -1,9 +1,9 @@
 {
-  "name": "windows-10-mail",
-  "displayName": "Windows 10 Mail",
+  "name": "windows-10-light",
+  "displayName": "Windows 10 Light",
   "theme": "ui",
   "version": "0.5.0",
-  "description": "Windows 10 Mail theme",
+  "description": "A light theme inspired by the dark look and feel of Microsoft's Windows 10 Mail app.",
   "license": "MIT",
   "engines": {
     "mailspring": "*"
