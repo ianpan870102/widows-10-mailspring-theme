@@ -153,20 +153,22 @@
 .scrollbar-track {
   background: transparent;
   border-left: none;
-  width: 10px;
 }
 
-// transitioning background instead of opacity
-// so the location tooltip isn't affected
+.account-sidebar .scrollbar-track {
+  margin-right: -@sidebar-margin;
+}
+
+.account-sidebar .scrollbar-track .scrollbar-handle,
 .scrollbar-track .scrollbar-handle {
-  background: fade(@sidebar, 20%);
+  background: @scrollbar-bg;
   border: none !important;
   cursor: -webkit-grab;
-  transition: background 300ms;
 }
 
+.account-sidebar .scrollbar-track.dragging .scrollbar-handle,
 .scrollbar-track.dragging .scrollbar-handle {
-  background: fade(@sidebar, 50%);
+  background: @scrollbar-bg-dragging;
   cursor: -webkit-grabbing;
 }
 
@@ -194,15 +196,4 @@
 .column-ThreadList .flexbox-handle-horizontal.flexbox-handle-right {
   right: -8px;
   padding: 0;
-}
-
-// we now offset the margin on scrollbar
-// in sidebar since it's position: relative
-.account-sidebar .scrollbar-track {
-  margin-right: -@sidebar-margin;
-}
-
-// and lighten the handle background
-.account-sidebar .scrollbar-track .scrollbar-handle {
-  background: fade(lighten(@sidebar, 50%), 40%);
 }
